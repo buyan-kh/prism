@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Scene Renderer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        background: #000;
+      }
+
+      #scene {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+      }
+
+      #ui {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scene"></div>
+    <div id="ui">
+      <h3>Crash Site Scene</h3>
+      <div>Scene: <span id="scene-name">Loading...</span></div>
+      <div>NPCs: <span id="npc-count">0</span></div>
+      <div>Props: <span id="prop-count">0</span></div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
