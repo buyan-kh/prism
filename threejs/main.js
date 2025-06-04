@@ -30,9 +30,6 @@ const exampleScene = {
   ],
 };
 
-// Alternative scene examples you can uncomment:
-
-// Enhanced Medical Facility Emergency Room
 /*
 const exampleScene = {
   scene: "medical_facility",
@@ -55,7 +52,6 @@ const exampleScene = {
 };
 */
 
-// Crime Scene Investigation
 /*
 const exampleScene = {
   scene: "crime_scene",
@@ -73,7 +69,6 @@ const exampleScene = {
 };
 */
 
-// Military Checkpoint
 /*
 const exampleScene = {
   scene: "military_checkpoint", 

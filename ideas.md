@@ -15,3 +15,8 @@
    make semantic maps
    analysis give tips info
    personal mentor coach
+
+3 and 4
+
+2.  goal : sell
+    goal :
