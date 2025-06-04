@@ -30,8 +30,7 @@ const exampleScene = {
   ],
 };
 
-/*
-const exampleScene = {
+const exampleScene2 = {
   scene: "medical_facility",
   npcs: [
     { id: "doctor_1", role: "paramedic", state: "treating", pos: [-3, 0, -2] },
@@ -40,34 +39,46 @@ const exampleScene = {
     { id: "patient_2", role: "unconscious", pos: [3, 0, -4] },
     { id: "doctor_2", role: "paramedic", state: "examining", pos: [0, 0, -8] },
     { id: "patient_3", role: "injured", state: "stable", pos: [1, 0, -8] },
-    { id: "security", role: "paramedic", state: "patrolling", pos: [-5, 0, -6] }
+    {
+      id: "security",
+      role: "paramedic",
+      state: "patrolling",
+      pos: [-5, 0, -6],
+    },
   ],
   props: [
     { type: "medical", model: "ambulance", pos: [-8, 0, 0] },
     { type: "medical", model: "stretcher", pos: [0, 0, -2] },
     { type: "medical", model: "equipment", pos: [4, 0, -2] },
     { type: "furniture", model: "desk", pos: [-1, 0, -10] },
-    { type: "medical", model: "equipment", pos: [2, 0, -8] }
-  ]
+    { type: "medical", model: "equipment", pos: [2, 0, -8] },
+  ],
 };
-*/
 
-/*
-const exampleScene = {
+const exampleScene3 = {
   scene: "crime_scene",
   npcs: [
-    { id: "detective_1", role: "paramedic", state: "investigating", pos: [-2, 0, -3] },
-    { id: "forensic_1", role: "paramedic", state: "collecting_evidence", pos: [1, 0, -5] },
+    {
+      id: "detective_1",
+      role: "paramedic",
+      state: "investigating",
+      pos: [-2, 0, -3],
+    },
+    {
+      id: "forensic_1",
+      role: "paramedic",
+      state: "collecting_evidence",
+      pos: [1, 0, -5],
+    },
     { id: "witness_1", role: "injured", state: "questioning", pos: [3, 0, -2] },
-    { id: "officer_1", role: "paramedic", state: "securing", pos: [-4, 0, -1] }
+    { id: "officer_1", role: "paramedic", state: "securing", pos: [-4, 0, -1] },
   ],
   props: [
     { type: "vehicle", model: "police_car", pos: [-6, 0, 2] },
     { type: "evidence", model: "crime_tape", pos: [0, 0, -4] },
-    { type: "furniture", model: "desk", pos: [2, 0, -6] }
-  ]
+    { type: "furniture", model: "desk", pos: [2, 0, -6] },
+  ],
 };
-*/
 
 /*
 const exampleScene = {
@@ -87,28 +98,18 @@ const exampleScene = {
 };
 */
 
-// Build the scene from JSON
 buildSceneFromJson(exampleScene, scene);
-
-// Add click interactions
 addInteractivity(scene, camera, renderer);
-
-// Animation loop
 const clock = new THREE.Clock();
 
 function animate() {
   requestAnimationFrame(animate);
 
   const deltaTime = clock.getDelta();
-
-  // Update controls
   controls.update(deltaTime);
 
-  // Render the scene
   renderer.render(scene, camera);
 }
-
-// Start the animation loop
 animate();
 
 console.log("Three.js scene initialized successfully!");
